@@ -2,7 +2,6 @@ import pytest
 import datasets
 from contextlib import contextmanager
 from typing import Iterator
-from cot import Collection
 import os
 from pathlib import Path
 
