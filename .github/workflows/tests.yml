@@ -35,13 +35,7 @@ jobs:
     - uses: actions/cache@v3
       with:
         path: ${{ env.pythonLocation }}
-        key: ${{ env.pythonLocation }}-${{ hashFiles('setup.cfg') }}
-
-    - id: python_cache
-      uses: actions/cache@v3
-      with:
-        path: venv
-        key: ${{ runner.os }}-pip-${{ steps.setup_python.outputs.python-version }}-${{ hashFiles('setup.cfg') }}
+        key: ${{ env.pythonLocation }}-${{ hashFiles('./libs/lib//setup.cfg') }}
 
     - name: Install dependencies
       run: |
